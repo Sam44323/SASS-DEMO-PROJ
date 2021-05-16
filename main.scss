@@ -8,9 +8,15 @@
   display: flex;
 }
 
+@mixin media-min-width($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
 html {
   font-size: 94.75%;
-  @media (min-width: 40rem) {
+  @include media-min-width(40rem) {
     font-size: 125%;
   }
 }
@@ -29,8 +35,7 @@ body {
   align-items: center;
   padding: 3rem 0;
   box-sizing: border-box;
-
-  @media (min-width: 40rem) {
+  @include media-min-width(40rem) {
     padding: 3rem 0;
   }
 }
@@ -43,7 +48,7 @@ body {
   box-shadow: 0.2rem 0.2rem 0.1rem #ccc;
   width: 90%;
   box-sizing: border-box;
-  @media (min-width: 40rem) {
+  @include media-min-width(40rem) {
     width: 30rem;
   }
 }
@@ -60,7 +65,7 @@ body {
   margin: 2rem 0;
   width: 90%;
   box-sizing: border-box;
-  @media (min-width: 40rem) {
+  @include media-min-width(40rem) {
     width: 30rem;
   }
 }
