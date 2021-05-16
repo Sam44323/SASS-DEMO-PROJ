@@ -4,7 +4,6 @@ $colors: (
 );
 $border-default: 0.05rem solid map-get($colors, main);
 @import "typography.css";
-
 html {
   font-size: 94.75%;
 }
